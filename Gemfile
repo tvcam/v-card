@@ -37,6 +37,7 @@ gem 'draper'
 gem 'pundit'
 gem 'rqrcode', '~> 2.0'
 gem 'active_admin_import'
+gem 'rake' , '>= 0.9.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

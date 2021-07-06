@@ -1,6 +1,6 @@
 
 set :stage, :production
-set :branch, 'master'
+set :branch, 'main'
 set :repo_url, "git@github.com:tvcam/#{fetch(:application)}.git"
 set :linked_files, fetch(:linked_files, []).push('db/production.sqlite3')
 
