@@ -11,7 +11,6 @@ set :deploy_to, "/var/www/#{fetch(:application)}"
 set :pty, false
 
 set :rvm_ruby_version, '2.7.2@lays-s2'
-set :rvm_roles, [:app, :web]
 set :passenger_restart_with_touch, true
 
 set :linked_dirs, fetch(:linked_dirs, []).push('public/qr_code', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets')
