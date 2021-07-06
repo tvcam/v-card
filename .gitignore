@@ -27,7 +27,7 @@
 !/storage/.keep
 
 /public/assets
-/public/qr_code
+/public/qr_code/*
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
