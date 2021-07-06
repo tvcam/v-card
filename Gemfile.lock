@@ -101,7 +101,7 @@ GEM
       sshkit (>= 1.9.0)
     capistrano-bundler (2.0.1)
       capistrano (~> 3.1)
-    capistrano-passenger (0.2.1)
+    capistrano-passenger (0.2.0)
       capistrano (~> 3.0)
     capistrano-rails (1.6.1)
       capistrano (~> 3.1)
@@ -228,8 +228,8 @@ GEM
       method_source
       rake (>= 0.13)
       thor (~> 1.0)
-    rake (13.0.4)
-    ransack (2.4.1)
+    rake (13.0.3)
+    ransack (2.4.2)
       activerecord (>= 5.2.4)
       activesupport (>= 5.2.4)
       i18n
@@ -340,7 +340,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 2.5.0p0
+   ruby 2.7.2p137
 
 BUNDLED WITH
    2.2.15
