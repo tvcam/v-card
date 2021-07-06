@@ -1,0 +1,26 @@
+<div class="user-wrapper">
+  <div class='user'>
+    <h1><%= @user.khmer_name %></h1>
+    <table>
+      <tr>
+        <th>Title:</th>
+        <td><%= @user.position %></td>
+      </tr>
+
+      <tr>
+        <th>Gender:</th>
+        <td><%= @user.gender %></td>
+      </tr>
+
+      <tr>
+        <th>Phone:</th>
+        <td><%= @user.primary_phone_number %></td>
+      </tr>
+
+      <tr>
+        <th>Email:</th>
+        <td><%= @user.email %></td>
+      </tr>
+    </table>
+  </div>
+</div>
