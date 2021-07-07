@@ -3,22 +3,22 @@
     <h1><%= @user.khmer_name %></h1>
     <table>
       <tr>
-        <th>Title:</th>
+        <th><%= t(:position) %>:</th>
         <td><%= @user.position %></td>
       </tr>
 
       <tr>
-        <th>Gender:</th>
+        <th><%= t(:gender) %>:</th>
         <td><%= @user.gender %></td>
       </tr>
 
       <tr>
-        <th>Phone:</th>
+        <th><%= t(:phone) %>:</th>
         <td><%= @user.primary_phone_number %></td>
       </tr>
 
       <tr>
-        <th>Email:</th>
+        <th><%= t(:email) %>:</th>
         <td><%= @user.email %></td>
       </tr>
     </table>
