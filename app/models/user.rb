@@ -8,7 +8,7 @@ class User < ApplicationRecord
   end
 
   def generate_qr_code
-    qrcode = RQRCode::QRCode.new("http://lays-s2.vibol.dev/users/#{self.token}")
+    qrcode = RQRCode::QRCode.new("https://lays-s2.vibol.dev/users/#{self.token}")
     
     # NOTE: showing with default options specified explicitly
     png = qrcode.as_png(
