@@ -4,3 +4,7 @@ en:
   phone: ទូរស័ព្ទ
   email: អុីម៉ែល
   gender: ភេទ
+  activerecord:
+    attributes:
+      user:
+        s2_id: S2-ID

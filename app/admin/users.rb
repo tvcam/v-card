@@ -1,6 +1,14 @@
 ActiveAdmin.register User do
   active_admin_import
 
+  filter :khmer_name
+  filter :english_name
+  filter :position
+  filter :primary_phone_number
+  filter :s2_id
+  filter :gender
+  filter :email
+
   permit_params(
     :khmer_name,
     :english_name,
@@ -21,9 +29,7 @@ ActiveAdmin.register User do
     column :khmer_name
     column :english_name
     column :position
-    column :address
     column :primary_phone_number
-    column :secondary_phone_number
     column :email
     column :gender
     column :nickname
@@ -35,6 +41,46 @@ ActiveAdmin.register User do
     actions do |user|
       link_to('Download QR Code', download_qr_admin_user_path(user), target: :_blank)
     end
+  end
+
+  show do
+    attributes_table do
+      row :s2_id
+      row :khmer_name
+      row :english_name
+      row :position
+      row :address
+      row :primary_phone_number
+      row :secondary_phone_number
+      row :email
+      row :gender
+      row :nickname
+    end
+
+    panel 'QR Code' do
+      "<img src='#{user.qr_path}' width=300 heigh=300>".html_safe
+    end
+
+    active_admin_comments
+  end
+
+  form do |f|
+    f.semantic_errors *f.object.errors.keys
+
+    f.inputs do
+      f.input :s2_id
+      f.input :khmer_name
+      f.input :english_name
+      f.input :position
+      f.input :address
+      f.input :primary_phone_number
+      f.input :secondary_phone_number
+      f.input :email
+      f.input :gender
+      f.input :nickname
+    end
+
+    f.actions
   end
 
   member_action :download_qr, method: :get do

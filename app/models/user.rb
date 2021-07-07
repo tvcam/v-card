@@ -2,6 +2,7 @@ class User < ApplicationRecord
   validates :khmer_name, presence: true
 
   before_create :set_token
+  after_commit :generate_qr_code, on: :create
 
   def qr_path
     "/qr_code/#{self.token}.png"
