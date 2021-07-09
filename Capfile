@@ -29,8 +29,8 @@ install_plugin Capistrano::SCM::Git
 require 'capistrano/rvm'
 require 'capistrano/bundler'
 # require 'capistrano/bundler' # Rails needs Bundler, right?
-# require 'capistrano/rails/assets'
-# require 'capistrano/rails/migrations'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
 require 'capistrano/passenger'
 # require 'capistrano/sidekiq'
 
