@@ -1,26 +1,28 @@
-<div class="user-wrapper">
-  <div class='user'>
-    <h1><%= @user.khmer_name %></h1>
-    <table>
-      <tr>
-        <th><%= t(:position) %>:</th>
-        <td><%= @user.position %></td>
-      </tr>
+<% cache @user do %>
+  <div class="user-wrapper">
+    <div class='user'>
+      <h1><%= @user.khmer_name %></h1>
+      <table>
+        <tr>
+          <th><%= t(:position) %>:</th>
+          <td><%= @user.position %></td>
+        </tr>
 
-      <tr>
-        <th><%= t(:gender) %>:</th>
-        <td><%= @user.gender %></td>
-      </tr>
+        <tr>
+          <th><%= t(:gender) %>:</th>
+          <td><%= @user.gender %></td>
+        </tr>
 
-      <tr>
-        <th><%= t(:phone) %>:</th>
-        <td><%= @user.primary_phone_number %></td>
-      </tr>
+        <tr>
+          <th><%= t(:phone) %>:</th>
+          <td><%= @user.primary_phone_number %></td>
+        </tr>
 
-      <tr>
-        <th><%= t(:email) %>:</th>
-        <td><%= @user.email %></td>
-      </tr>
-    </table>
+        <tr>
+          <th><%= t(:email) %>:</th>
+          <td><%= @user.email %></td>
+        </tr>
+      </table>
+    </div>
   </div>
-</div>
+<% end %>
