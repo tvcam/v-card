@@ -32,6 +32,7 @@ ActiveAdmin.register User do
     column :primary_phone_number
     column :email
     column :gender
+    column :scanned_count
     column :nickname
     column :s2_id
     column :qr_code do |user|

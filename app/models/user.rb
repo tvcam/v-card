@@ -28,6 +28,10 @@ class User < ApplicationRecord
     IO.binwrite("public#{qr_path}", png.to_s)
   end
 
+  def increment_scanned_count!
+    update_columns(scanned_count: (scanned_count + 1))
+  end
+
   private
 
   def set_token
