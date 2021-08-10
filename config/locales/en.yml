@@ -4,6 +4,7 @@ en:
   phone: ទូរស័ព្ទ
   email: អុីម៉ែល
   gender: ភេទ
+  address: អាស័យដ្ឋាន
   activerecord:
     attributes:
       user:

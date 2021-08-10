@@ -1,28 +1,46 @@
-<% cache @user.updated_at do %>
-  <div class="user-wrapper">
-    <div class='user'>
-      <h1><%= @user.khmer_name %></h1>
-      <table>
-        <tr>
-          <th><%= t(:position) %>:</th>
-          <td><%= @user.position %></td>
-        </tr>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="text-center">
+        <%= image_tag 'logo.jpg', class: 'img-fluid mt-5 mb-3', width: 150 %>
+        <h1 class="fs-3 fw-bold">សម្ពន្ធយុវជនអាហារូបករណ៍-ស២</h1>
 
-        <tr>
-          <th><%= t(:gender) %>:</th>
-          <td><%= @user.gender %></td>
-        </tr>
+        <h2 class="mt-5"><%= @user.khmer_name %></h2>
+      </div>
 
-        <tr>
-          <th><%= t(:phone) %>:</th>
-          <td><%= @user.primary_phone_number %></td>
-        </tr>
+      <% cache @user.updated_at do %>
+        <div class="user-wrapper">
+          <div class='user'>
+            <table class="table">
+              <tr>
+                <th><%= t(:position) %>:</th>
+                <td><%= @user.position.presence || 'Not specify' %></td>
+              </tr>
 
-        <tr>
-          <th><%= t(:email) %>:</th>
-          <td><%= @user.email %></td>
-        </tr>
-      </table>
+              <tr>
+                <th><%= t(:gender) %>:</th>
+                <td><%= @user.gender.presence || 'Not specify' %></td>
+              </tr>
+
+              <tr>
+                <th><%= t(:phone) %>:</th>
+                <td><%= @user.primary_phone_number.presence || 'Not specify' %></td>
+              </tr>
+
+              <tr>
+                <th><%= t(:email) %>:</th>
+                <td><%= @user.email.presence || 'Not specify' %></td>
+              </tr>
+
+              <tr>
+                <th><%= t(:address) %>:</th>
+                <td><%= @user.address.presence || 'Not specify' %></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      <% end %>
+
     </div>
   </div>
-<% end %>
+</div>
