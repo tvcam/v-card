@@ -26,6 +26,16 @@ class User < ApplicationRecord
     )
     
     IO.binwrite("public#{qr_path}", png.to_s)
+
+    add_logo
+  end
+
+  def add_logo
+    qrcode  = ChunkyPNG::Image.from_file("./public#{qr_path}")
+    logo    = ChunkyPNG::Image.from_file("./public/photo_2021-08-10_15-18-19-removebg-preview.png")
+    
+    qrcode.compose!(logo, 175, 175)
+    qrcode.save("public#{qr_path}", :fast_rgb)
   end
 
   def increment_scanned_count!
